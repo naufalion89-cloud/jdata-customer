@@ -1,0 +1,2027 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>PT. JALUR DATA INDONESIA - Layanan Internet Cepat & Stabil</title>
+  
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfeff',
+              100: '#cffafe',
+              400: '#22d3ee',
+              500: '#06b6d4',
+              600: '#0891b2',
+              700: '#0e7490',
+              accent: '#f97316',
+              glow: '#3b82f6',
+            }
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Live Animated Dynamic Gradient Background */
+    @keyframes liveGradientMove {
+      0% { background-position: 0% 50%; }
+      25% { background-position: 50% 100%; }
+      50% { background-position: 100% 50%; }
+      75% { background-position: 50% 0%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    body {
+      background: linear-gradient(-45deg, #050b14, #0a192f, #0d273d, #141738, #071626);
+      background-size: 350% 350%;
+      animation: liveGradientMove 20s ease infinite;
+      min-height: 100vh;
+      color: #f1f5f9;
+    }
+
+    /* Vibrant Ambient Glow Blurs */
+    .ambient-orb {
+      position: absolute;
+      border-radius: 9999px;
+      filter: blur(100px);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.45;
+      animation: orbFloat 14s ease-in-out infinite alternate;
+    }
+    .orb-cyan { background: radial-gradient(circle, #06b6d4, #0284c7); }
+    .orb-purple { background: radial-gradient(circle, #8b5cf6, #4f46e5); }
+    .orb-orange { background: radial-gradient(circle, #f97316, #ea580c); }
+
+    @keyframes orbFloat {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(40px, -50px) scale(1.18); }
+    }
+
+    /* Ultra Glassmorphism */
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(56, 189, 248, 0.18);
+    }
+    .glass-card-glow {
+      background: rgba(15, 23, 42, 0.78);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(6, 182, 212, 0.25);
+      box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.15);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card-glow:hover {
+      border-color: rgba(6, 182, 212, 0.55);
+      box-shadow: 0 15px 35px -5px rgba(6, 182, 212, 0.25);
+      transform: translateY(-3px);
+    }
+
+    /* Adaptive Auto-Resize Inputs */
+    .form-input-adaptive {
+      width: 100%;
+      min-height: 44px;
+      font-size: 0.9375rem; /* 15px prevents mobile auto-zoom */
+      transition: all 0.2s ease-in-out;
+    }
+    @media (min-width: 640px) {
+      .form-input-adaptive {
+        font-size: 0.875rem;
+      }
+    }
+    .auto-grow-textarea {
+      overflow: hidden;
+      resize: none;
+      min-height: 80px;
+      transition: height 0.12s ease-out;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #09111e;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #0284c7;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #06b6d4;
+    }
+
+    /* Rotating Gear Animation */
+    .gear-rotate:hover i {
+      transform: rotate(180deg);
+      transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased text-slate-100 selection:bg-cyan-500 selection:text-white relative overflow-x-hidden">
+
+  <!-- Ambient Dynamic Colored Orbs in Background -->
+  <div class="ambient-orb orb-cyan w-80 sm:w-96 h-80 sm:h-96 top-10 left-[-80px]"></div>
+  <div class="ambient-orb orb-purple w-72 sm:w-96 h-72 sm:h-96 top-[800px] right-[-100px]"></div>
+  <div class="ambient-orb orb-orange w-60 sm:w-80 h-60 sm:h-80 top-[1800px] left-[-60px]"></div>
+  <div class="ambient-orb orb-cyan w-96 h-96 top-[3000px] right-[-90px]"></div>
+
+  <!-- Top Navigation Bar -->
+  <header class="sticky top-0 z-40 glass-panel border-b border-cyan-500/20 shadow-lg shadow-black/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+      
+      <!-- Company Logo & Name -->
+      <a href="#beranda" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 p-0.5 shadow-lg shadow-cyan-500/30 group-hover:scale-105 transition-all">
+          <img id="navCompanyLogo" src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=120&auto=format&fit=crop&q=80" alt="Logo PT JDI" class="w-full h-full object-cover rounded-[10px]" onerror="this.src='https://placehold.co/100x100/0891b2/ffffff?text=JDI'" />
+        </div>
+        <div>
+          <div class="font-heading font-extrabold text-base sm:text-lg text-white tracking-wide flex items-center gap-1.5">
+            PT. JALUR DATA INDONESIA
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          </div>
+          <p class="text-[10px] sm:text-xs text-cyan-300/90 font-medium tracking-wider uppercase">High Speed Optical Fiber Network</p>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-7 text-xs sm:text-sm font-semibold text-slate-300">
+        <a href="#beranda" class="hover:text-cyan-400 transition-colors">Beranda</a>
+        <a href="#profil" class="hover:text-cyan-400 transition-colors">Profil PT</a>
+        <a href="#paket" class="hover:text-cyan-400 transition-colors">Paket WiFi</a>
+        <a href="#kegiatan" class="hover:text-cyan-400 transition-colors">Galeri Foto</a>
+        <a href="#testimoni" class="hover:text-cyan-400 transition-colors">Testimoni</a>
+        <a href="#kontak" class="hover:text-cyan-400 transition-colors">Kontak & Lokasi</a>
+      </nav>
+
+      <!-- Action Buttons & Samar 10% Gear Admin Circle -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <!-- Tombol Ajakan Mendaftar Header -->
+        <a href="#cek-area" class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-xs sm:text-sm shadow-md shadow-cyan-500/25 flex items-center gap-2 transform active:scale-95 transition-all">
+          <i class="fa-solid fa-wifi text-xs animate-bounce"></i>
+          <span>Daftar Pasang Baru</span>
+        </a>
+
+        <!-- Bulatan Bergerigi Samar 10% Login Admin (Deskripsi User: Samar 10%) -->
+        <button 
+          onclick="openAdminModal()" 
+          title="Akses Portal Manajemen Staf"
+          class="gear-rotate w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-800/80 border border-slate-700/60 flex items-center justify-center text-slate-400 opacity-10 hover:opacity-100 hover:text-cyan-300 hover:border-cyan-400 hover:bg-slate-800 hover:shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 cursor-pointer"
+        >
+          <i class="fa-solid fa-gear text-sm sm:text-base transition-transform duration-500"></i>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button onclick="toggleMobileNav()" class="lg:hidden w-9 h-9 rounded-xl bg-slate-800/80 text-slate-300 flex items-center justify-center border border-slate-700">
+          <i id="navToggleIcon" class="fa-solid fa-bars text-sm"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobileNavMenu" class="hidden lg:hidden border-t border-slate-800/80 bg-slate-950/95 px-5 py-4 space-y-3 text-sm">
+      <a href="#beranda" onclick="toggleMobileNav()" class="block py-1.5 text-slate-200 hover:text-cyan-400">Beranda</a>
+      <a href="#profil" onclick="toggleMobileNav()" class="block py-1.5 text-slate-200 hover:text-cyan-400">Profil PT & Legalitas</a>
+      <a href="#paket" onclick="toggleMobileNav()" class="block py-1.5 text-slate-200 hover:text-cyan-400">Pilihan Paket WiFi</a>
+      <a href="#kegiatan" onclick="toggleMobileNav()" class="block py-1.5 text-slate-200 hover:text-cyan-400">Folder Kumpulan Foto</a>
+      <a href="#testimoni" onclick="toggleMobileNav()" class="block py-1.5 text-slate-200 hover:text-cyan-400">Testimoni Warga</a>
+      <a href="#kontak" onclick="toggleMobileNav()" class="block py-1.5 text-slate-200 hover:text-cyan-400">Kontak Kantor & Peta</a>
+      <a href="#cek-area" onclick="toggleMobileNav()" class="block text-center py-2.5 rounded-xl bg-cyan-500 font-bold text-white shadow-lg">Cek Area Sekarang</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="beranda" class="relative z-10 pt-10 sm:pt-16 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
+      
+      <!-- Left Hero Text & CTA -->
+      <div class="lg:col-span-7 space-y-5 sm:space-y-6 text-center lg:text-left">
+        
+        <!-- Live Coverage Announcement Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-cyan-400/40 text-cyan-300 text-xs font-semibold shadow-inner">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span>PENGUMUMAN RESMI: Jaringan Fiber Optic Siap Terpasang</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-black text-white tracking-tight leading-[1.15]">
+          PT. JALUR DATA INDONESIA
+          <span class="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-500">
+            Koneksi Cepat Tanpa Batas, Keluarga Puas!
+          </span>
+        </h1>
+
+        <p class="text-sm sm:text-base md:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+          Nikmati internet rumah & usaha ultra-cepat 100% Fiber Optic murni tanpa batasan FUP. Streaming lancar, gaming tanpa lag, dan belajar daring makin optimal bersama PT JDI.
+        </p>
+
+        <!-- Banner Menarik: Tidak Perlu Kemana-mana Kami yang Datang -->
+        <div class="relative overflow-hidden p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-amber-500/20 via-cyan-500/20 to-blue-600/20 border border-cyan-400/50 shadow-xl shadow-cyan-500/15 backdrop-blur-md group hover:border-amber-400/60 transition-all">
+          <div class="absolute -right-6 -top-6 w-24 h-24 bg-amber-400/20 rounded-full blur-2xl pointer-events-none"></div>
+          <div class="flex items-center gap-3.5 sm:gap-4">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-tr from-amber-400 via-orange-500 to-rose-500 text-slate-950 flex items-center justify-center flex-shrink-0 text-xl sm:text-2xl font-black shadow-lg shadow-amber-500/30 ring-2 ring-amber-300/70 group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-couch"></i>
+            </div>
+            <div class="space-y-1 text-left">
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-400/20 text-amber-300 text-[10px] sm:text-xs font-extrabold uppercase tracking-wider border border-amber-400/40">
+                <i class="fa-solid fa-wand-magic-sparkles text-amber-400 animate-pulse"></i> LAYANAN INSTAN TANPA ANTRE
+              </div>
+              <h3 class="text-sm sm:text-base md:text-lg font-heading font-black text-white leading-tight uppercase">
+                TIDAK PERLU KEMANA-MANA, CUKUP ISI FORM WEB YANG TERSEDIA &mdash; <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-amber-300 to-emerald-300 font-extrabold">KAMI YANG AKAN DATANG!</span>
+              </h3>
+              <p class="text-xs sm:text-sm font-black text-amber-300 uppercase tracking-wide flex items-center gap-1.5">
+                <span>"KALAU ADA YANG SIMPEL, KENAPA MESTI RIBET?"</span>
+                <span class="text-base sm:text-lg">✨</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Area Coverage Highlight -->
+        <div class="p-4 rounded-2xl glass-card-glow border border-cyan-500/30 text-left">
+          <div class="flex items-center gap-2 text-xs font-bold text-cyan-300 mb-2 uppercase tracking-wider">
+            <i class="fa-solid fa-tower-broadcast text-cyan-400"></i> Cover Area Layanan Pemasangan Aktif:
+          </div>
+          <div class="flex flex-wrap gap-2 text-xs font-medium">
+            <span class="px-3 py-1 rounded-lg bg-cyan-950/80 text-cyan-300 border border-cyan-500/40 flex items-center gap-1.5">
+              <i class="fa-solid fa-location-dot text-cyan-400"></i> SUKOHARJO
+            </span>
+            <span class="px-3 py-1 rounded-lg bg-blue-950/80 text-blue-300 border border-blue-500/40 flex items-center gap-1.5">
+              <i class="fa-solid fa-location-dot text-blue-400"></i> BANYUMAS
+            </span>
+            <span class="px-3 py-1 rounded-lg bg-indigo-950/80 text-indigo-300 border border-indigo-500/40 flex items-center gap-1.5">
+              <i class="fa-solid fa-location-dot text-indigo-400"></i> BANJAREJO, BUMI ARUM, PRINGSEWU
+            </span>
+            <span class="px-3 py-1 rounded-lg bg-emerald-950/80 text-emerald-300 border border-emerald-500/40 flex items-center gap-1.5">
+              <i class="fa-solid fa-location-dot text-emerald-400"></i> PANTURA
+            </span>
+            <span class="px-3 py-1 rounded-lg bg-slate-800/80 text-slate-300 border border-slate-700 flex items-center gap-1.5">
+              <i class="fa-solid fa-map-pin text-slate-400"></i> & WILAYAH SEKITARNYA
+            </span>
+          </div>
+        </div>
+
+        <!-- Direct CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
+          <a href="#cek-area" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-sm shadow-xl shadow-cyan-500/30 flex items-center justify-center gap-2.5 transition-all transform hover:-translate-y-0.5">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Cek Area & Formulir Pasang Baru</span>
+          </a>
+          <a href="https://wa.me/6281272737850?text=Halo%20Admin%20PT%20JDI,%20saya%20ingin%20tanya%20pemasangan%20WiFi%20baru" target="_blank" class="w-full sm:w-auto px-6 py-3.5 rounded-xl glass-panel border border-slate-700 hover:border-emerald-500/50 text-slate-200 hover:text-white font-semibold text-sm flex items-center justify-center gap-2.5 transition-all">
+            <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+            <span>Konsultasi WA: 0812-7273-7850</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Right Hero Graphic / Photo Presentation -->
+      <div class="lg:col-span-5 relative">
+        <div class="glass-card-glow rounded-3xl p-4 sm:p-5 border border-cyan-500/40 relative overflow-hidden shadow-2xl">
+          <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900">
+            <img 
+              src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&auto=format&fit=crop&q=80" 
+              alt="Teknisi Fiber Optic PT JDI" 
+              class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+            
+            <div class="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-slate-900/80 backdrop-blur-md border border-cyan-500/30 text-xs">
+              <div class="font-bold text-white flex items-center gap-1.5">
+                <i class="fa-solid fa-award text-amber-400"></i> Infrastruktur Fiber Optic Terdepan
+              </div>
+              <p class="text-[11px] text-slate-300 mt-0.5">Kecepatan simetris, ping rendah stabil, dan teknisi lokal 24/7.</p>
+            </div>
+          </div>
+
+          <!-- Mini Feature Counter -->
+          <div class="grid grid-cols-3 gap-2.5 mt-4 text-center">
+            <div class="p-2.5 rounded-xl bg-slate-900/90 border border-slate-800">
+              <div class="text-base sm:text-lg font-extrabold text-cyan-400">100%</div>
+              <div class="text-[10px] text-slate-400">Fiber Optic</div>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-900/90 border border-slate-800">
+              <div class="text-base sm:text-lg font-extrabold text-emerald-400">Unlimited</div>
+              <div class="text-[10px] text-slate-400">Tanpa FUP</div>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-900/90 border border-slate-800">
+              <div class="text-base sm:text-lg font-extrabold text-blue-400">24/7</div>
+              <div class="text-[10px] text-slate-400">Support Cepat</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Profil PT Section -->
+  <section id="profil" class="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+    <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950 text-cyan-300 text-xs font-semibold mb-3 border border-cyan-500/40">
+        <i class="fa-solid fa-building"></i> TENTANG KAMI
+      </div>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-white">Profil PT. JALUR DATA INDONESIA</h2>
+      <p class="text-sm text-slate-300 mt-2">
+        Penyedia jasa internet (ISP) berlisensi resmi yang berkomitmen menghadirkan konektivitas digital berkecepatan tinggi bagi masyarakat pedesaan hingga perkotaan di Indonesia.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      
+      <!-- Sejarah Singkat & Akreditasi Legalitas -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="glass-card-glow rounded-2xl p-6 border border-cyan-500/30">
+          <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-3">
+            <i class="fa-solid fa-clock-rotate-left text-cyan-400"></i> Sejarah Singkat Perusahaan
+          </h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Berdiri dengan tekad mempercepat pemerataan akses internet di wilayah Lampung khususnya Sukoharjo, Banyumas, BANJAREJO, BUMI ARUM, PRINGSEWU, Pantura, dan sekitarnya. Berawal dari komunitas teknologi lokal, PT. JALUR DATA INDONESIA (JDI) berkembang menjadi entitas ISP modern dengan menggelar jaringan serat optik mandiri (*dedicated optical fiber network*) yang handal dan tahan cuaca.
+          </p>
+        </div>
+
+        <!-- Akreditasi & Legalitas Resmi -->
+        <div class="glass-card-glow rounded-2xl p-6 border border-emerald-500/30">
+          <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4">
+            <i class="fa-solid fa-certificate text-emerald-400"></i> Legalitas & Akreditasi Resmi
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs text-slate-300">
+            <div class="p-3 rounded-xl bg-slate-900/90 border border-slate-800 flex items-start gap-2.5">
+              <i class="fa-solid fa-shield-check text-emerald-400 text-base mt-0.5"></i>
+              <div>
+                <strong class="text-white block">Izin ISP Kominfo RI</strong>
+                <span>Penyelenggara Jasa Akses Internet Resmi Nasional</span>
+              </div>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900/90 border border-slate-800 flex items-start gap-2.5">
+              <i class="fa-solid fa-network-wired text-cyan-400 text-base mt-0.5"></i>
+              <div>
+                <strong class="text-white block">Anggota APJII</strong>
+                <span>Terhubung ke OpenIXP & Indonesia Internet Exchange</span>
+              </div>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900/90 border border-slate-800 flex items-start gap-2.5">
+              <i class="fa-solid fa-file-contract text-blue-400 text-base mt-0.5"></i>
+              <div>
+                <strong class="text-white block">NIB & SK Kemenkumham</strong>
+                <span>Berbadan Hukum Perseroan Terbatas Resmi</span>
+              </div>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900/90 border border-slate-800 flex items-start gap-2.5">
+              <i class="fa-solid fa-headset text-orange-400 text-base mt-0.5"></i>
+              <div>
+                <strong class="text-white block">SLA 99.5% Terjamin</strong>
+                <span>Standar Kualitas Jaringan Tinggi & Garansi Layanan</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visi, Misi & Struktur Organisasi -->
+      <div class="lg:col-span-5 space-y-6">
+        <!-- Visi & Misi Card -->
+        <div class="glass-card-glow rounded-2xl p-6 border border-cyan-500/30 space-y-4">
+          <div>
+            <h3 class="text-sm font-bold text-cyan-400 uppercase tracking-wider flex items-center gap-1.5 mb-1">
+              <i class="fa-solid fa-eye"></i> Visi Kami
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-200 italic leading-relaxed">
+              "Menjadi penyelenggara infrastruktur digital terpercaya yang membuka gerbang kemakmuran ekonomi dan pendidikan digital tanpa batas hingga pelosok nusantara."
+            </p>
+          </div>
+
+          <div class="pt-3 border-t border-slate-800">
+            <h3 class="text-sm font-bold text-cyan-400 uppercase tracking-wider flex items-center gap-1.5 mb-2">
+              <i class="fa-solid fa-bullseye"></i> Misi Utama
+            </h3>
+            <ul class="text-xs text-slate-300 space-y-2">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-cyan-400 mt-0.5"></i>
+                <span>Membangun jalur serat optik stabil hingga ke tingkat desa.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-cyan-400 mt-0.5"></i>
+                <span>Menyediakan tarif internet terjangkau dengan mutu terbaik.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-cyan-400 mt-0.5"></i>
+                <span>Memberikan pelayanan teknis cepat tanggap dan ramah 24 jam.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Struktur Organisasi Ringkas -->
+        <div class="glass-card-glow rounded-2xl p-6 border border-slate-800">
+          <h3 class="text-sm font-bold text-white flex items-center gap-2 mb-3">
+            <i class="fa-solid fa-sitemap text-blue-400"></i> Struktur Organisasi Inti
+          </h3>
+          <div class="space-y-2 text-xs">
+            <div class="p-2 rounded-lg bg-slate-900/80 flex items-center justify-between border border-slate-800">
+              <span class="text-slate-400">Direktur Utama:</span>
+              <span class="font-semibold text-white">Pimpinan PT JDI</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-900/80 flex items-center justify-between border border-slate-800">
+              <span class="text-slate-400">Manajer Operasional & NOC:</span>
+              <span class="font-semibold text-cyan-300">Tim Jaringan & Server</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-900/80 flex items-center justify-between border border-slate-800">
+              <span class="text-slate-400">Koordinator Lapangan & FO:</span>
+              <span class="font-semibold text-emerald-300">Tim Teknisi Pringsewu & Pantura</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-900/80 flex items-center justify-between border border-slate-800">
+              <span class="text-slate-400">Layanan Pelanggan & Keuangan:</span>
+              <span class="font-semibold text-orange-300">Customer Support 24/7</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Paket Internet WiFi Section -->
+  <section id="paket" class="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+    <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950 text-cyan-300 text-xs font-semibold mb-3 border border-cyan-500/40">
+        <i class="fa-solid fa-gauge-high"></i> PILIHAN KECEPATAN
+      </div>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-white">Paket Internet Rumah & Usaha</h2>
+      <p class="text-sm text-slate-300 mt-2">
+        Koneksi tanpa batasan kuota (FUP), kecepatan simetris murni, dan modem WiFi gratis dipinjamkan selama berlangganan.
+      </p>
+    </div>
+
+    <!-- Dynamic Package Cards Grid -->
+    <div id="packagesContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Injected dynamically via JS -->
+    </div>
+
+    <!-- Penawaran Paket Khusus Cafe, Instansi, Bisnis & Kos -->
+    <div class="mt-10 p-6 rounded-2xl glass-card-glow border border-cyan-500/30 flex flex-col md:flex-row items-center justify-between gap-5">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-xl text-white flex-shrink-0 shadow-lg shadow-cyan-500/30">
+          <i class="fa-solid fa-mug-hot"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-white text-base">Butuh Paket Khusus Cafe, Warkop, Kantor atau Kos-Kosan?</h4>
+          <p class="text-xs text-slate-300 mt-0.5">Tersedia fitur Voucher Billing, Multi-SSID, dan Bandwidth Management khusus untuk tempat usaha Anda.</p>
+        </div>
+      </div>
+      <a href="https://wa.me/6281272737850?text=Halo%20PT%20JDI,%20saya%20tertarik%20paket%20khusus%20Cafe%20dan%20Tempat%20Usaha" target="_blank" class="px-5 py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs flex items-center gap-2 flex-shrink-0 transition-colors shadow-md">
+        <i class="fa-brands fa-whatsapp text-sm"></i>
+        <span>Hubungi Tim Sales Usaha</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Formulir Cek Area & Pendaftaran Section -->
+  <section id="cek-area" class="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-slate-800/80">
+    <!-- Super Eye-Catching Banner Di Atas Formulir -->
+    <div class="mb-6 p-4 sm:p-5 rounded-3xl bg-gradient-to-r from-slate-900/95 via-cyan-950/90 to-blue-950/95 border-2 border-cyan-400/60 shadow-2xl shadow-cyan-500/20 backdrop-blur-xl flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left relative overflow-hidden">
+      <div class="absolute -left-10 -bottom-10 w-32 h-32 bg-cyan-400/20 rounded-full blur-2xl pointer-events-none"></div>
+      <div class="absolute -right-10 -top-10 w-32 h-32 bg-amber-400/15 rounded-full blur-2xl pointer-events-none"></div>
+      
+      <div class="flex items-center gap-3.5 z-10">
+        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-tr from-cyan-400 via-sky-500 to-blue-600 text-white flex items-center justify-center text-xl sm:text-2xl shadow-lg shadow-cyan-500/30 flex-shrink-0 ring-2 ring-cyan-300/40">
+          <i class="fa-solid fa-truck-fast animate-pulse"></i>
+        </div>
+        <div>
+          <div class="text-[11px] sm:text-xs font-extrabold text-amber-400 uppercase tracking-wider flex items-center justify-center sm:justify-start gap-1.5">
+            <i class="fa-solid fa-circle-check text-emerald-400"></i> LAYANAN INSTAN TANPA ANTRE
+          </div>
+          <div class="text-sm sm:text-base md:text-lg font-heading font-black text-white mt-0.5 uppercase leading-tight">
+            TIDAK PERLU KEMANA-MANA, CUKUP ISI FORM WEB YANG TERSEDIA &mdash; <span class="text-cyan-300 underline decoration-cyan-400/60 decoration-2 underline-offset-4">KAMI YANG AKAN DATANG!</span>
+          </div>
+          <div class="text-xs sm:text-sm text-amber-300 font-black uppercase tracking-wide mt-1">
+            "KALAU ADA YANG SIMPEL, KENAPA MESTI RIBET?" 🚀
+          </div>
+        </div>
+      </div>
+
+      <div class="z-10 flex-shrink-0 w-full sm:w-auto">
+        <span class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-cyan-500/20 text-cyan-300 text-xs font-bold border border-cyan-400/40 w-full sm:w-auto shadow-sm">
+          <i class="fa-solid fa-house-laptop text-cyan-400"></i>
+          <span>Duduk Santai di Rumah</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="glass-card-glow rounded-3xl p-5 sm:p-8 lg:p-10 border border-cyan-500/40 relative shadow-2xl">
+      
+      <!-- Top Form Header with Tombol Kembali di setiap form -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-800 pb-5 mb-6 sm:mb-8">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 text-orange-400 text-xs font-semibold mb-2 border border-orange-500/30">
+            <i class="fa-solid fa-map-pin"></i> CEK AREA & PASANG BARU
+          </div>
+          <h2 class="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-white">Formulir Pemasangan Pelanggan Baru</h2>
+          <p class="text-xs sm:text-sm text-slate-300 mt-1">
+            Isi data di bawah ini. Anda akan mendapatkan <strong class="text-cyan-300">Nomor Reservasi Otomatis</strong> resmi seketika!
+          </p>
+        </div>
+        
+        <!-- Tombol Kembali di setiap form -->
+        <a href="#beranda" class="w-full sm:w-auto px-4 py-2.5 rounded-xl text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 flex items-center justify-center gap-2 transition-colors">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Kembali ke Beranda</span>
+        </a>
+      </div>
+
+      <!-- Registration Form with Adaptive Auto-Resize Fields -->
+      <form id="registrationForm" onsubmit="handleRegistration(event)" class="space-y-5 sm:space-y-6">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          <!-- Nama Lengkap -->
+          <div class="w-full">
+            <label class="block text-xs sm:text-sm font-semibold text-slate-200 mb-2">
+              <i class="fa-solid fa-user text-cyan-400 mr-1.5"></i> Nama Lengkap Pelanggan *
+            </label>
+            <input 
+              type="text" 
+              id="custName" 
+              required
+              placeholder="Contoh: Budi Santoso" 
+              class="form-input-adaptive w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white placeholder-slate-500 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 outline-none"
+            />
+          </div>
+
+          <!-- Nomor WhatsApp/HP -->
+          <div class="w-full">
+            <label class="block text-xs sm:text-sm font-semibold text-slate-200 mb-2">
+              <i class="fa-brands fa-whatsapp text-emerald-400 mr-1.5"></i> Nomor HP / WhatsApp Aktif *
+            </label>
+            <input 
+              type="tel" 
+              id="custPhone" 
+              required
+              placeholder="Contoh: 081272737850 atau 0812xxxx" 
+              class="form-input-adaptive w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white placeholder-slate-500 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 outline-none"
+            />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          <!-- Pilihan Wilayah / Desa -->
+          <div class="w-full">
+            <label class="block text-xs sm:text-sm font-semibold text-slate-200 mb-2">
+              <i class="fa-solid fa-city text-cyan-400 mr-1.5"></i> Pilihan Desa / Wilayah Layanan *
+            </label>
+            <select 
+              id="custDesa" 
+              required 
+              class="form-input-adaptive w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 outline-none"
+            >
+              <option value="" disabled selected>-- Pilih Wilayah / Desa Anda --</option>
+              <option value="Sukoharjo">Sukoharjo & Sekitarnya</option>
+              <option value="Banyumas">Banyumas (Kec. Banyumas - Pringsewu)</option>
+              <option value="BANJAREJO, BUMI ARUM, PRINGSEWU">BANJAREJO, BUMI ARUM, PRINGSEWU & Sekitarnya</option>
+              <option value="Pantura">Pantura & Sekitarnya</option>
+              <option value="Lainnya">Wilayah Lainnya (Akan dicek oleh Tim Teknisi)</option>
+            </select>
+          </div>
+
+          <!-- Pilihan Paket Internet -->
+          <div class="w-full">
+            <label class="block text-xs sm:text-sm font-semibold text-slate-200 mb-2">
+              <i class="fa-solid fa-gauge-high text-cyan-400 mr-1.5"></i> Pilihan Paket Internet *
+            </label>
+            <select 
+              id="custPackage" 
+              required 
+              class="form-input-adaptive w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 outline-none"
+            >
+              <!-- Dynamic populated from state -->
+            </select>
+          </div>
+        </div>
+
+        <!-- Alamat Lengkap dengan Auto-Grow Textarea -->
+        <div class="w-full">
+          <label class="block text-xs sm:text-sm font-semibold text-slate-200 mb-2">
+            <i class="fa-solid fa-map-location-dot text-cyan-400 mr-1.5"></i> Alamat Lengkap & Patokan Rumah *
+          </label>
+          <textarea 
+            id="custAddress" 
+            rows="2" 
+            required
+            oninput="autoResizeTextarea(this)"
+            placeholder="Contoh: Jl. AMD RT 010 RW 03 No 35, depan Pertashop / dekat tiang listrik / warna pagar hitam (kolom otomatis membesar saat mengetik panjang)" 
+            class="form-input-adaptive auto-grow-textarea w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white placeholder-slate-500 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 outline-none"
+          ></textarea>
+        </div>
+
+        <!-- Foto Lokasi Rumah (Camera & Galeri) -->
+        <div class="bg-slate-900/70 p-4 sm:p-5 rounded-2xl border border-dashed border-cyan-500/30 w-full">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-3">
+            <div>
+              <label class="block text-xs sm:text-sm font-bold text-white">
+                <i class="fa-solid fa-camera text-cyan-400 mr-1.5"></i> Foto Lokasi Rumah / Titik Pemasangan *
+              </label>
+              <p class="text-[11px] sm:text-xs text-slate-400">
+                Ambil foto tampak depan rumah menggunakan kamera HP atau ambil dari galeri Anda.
+              </p>
+            </div>
+            
+            <!-- Tombol Kamera vs Galeri -->
+            <div class="grid grid-cols-2 sm:flex items-center gap-2 w-full sm:w-auto">
+              <label for="locationPhotoCamera" class="cursor-pointer px-3.5 py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition-all shadow">
+                <i class="fa-solid fa-camera"></i> <span>Kamera</span>
+              </label>
+              <input type="file" id="locationPhotoCamera" accept="image/*" capture="environment" class="hidden" onchange="previewLocationImage(event)">
+
+              <label for="locationPhotoGallery" class="cursor-pointer px-3.5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 flex items-center justify-center gap-1.5 transition-all">
+                <i class="fa-solid fa-images text-cyan-400"></i> <span>Pilih Galeri</span>
+              </label>
+              <input type="file" id="locationPhotoGallery" accept="image/*" class="hidden" onchange="previewLocationImage(event)">
+            </div>
+          </div>
+
+          <!-- Image Preview Container -->
+          <div id="imagePreviewContainer" class="hidden mt-3 relative rounded-xl overflow-hidden border border-cyan-500/40 bg-slate-950 max-w-sm mx-auto">
+            <img id="locationPhotoPreview" src="" alt="Pratinjau Foto Lokasi" class="w-full h-48 object-cover" />
+            <button type="button" onclick="removeLocationPhoto()" class="absolute top-2 right-2 p-1.5 bg-rose-600 text-white rounded-full text-xs hover:bg-rose-500 transition-colors shadow">
+              <i class="fa-solid fa-xmark px-1"></i>
+            </button>
+            <div class="p-2 bg-slate-900 text-[11px] text-emerald-400 flex items-center justify-between">
+              <span><i class="fa-solid fa-circle-check mr-1"></i> Foto Siap Dikirim</span>
+              <span id="photoFileName" class="text-slate-400 truncate max-w-[140px]"></span>
+            </div>
+          </div>
+
+          <div id="photoPlaceholder" class="text-center py-5 text-slate-500 text-xs">
+            <i class="fa-regular fa-image text-3xl mb-1 text-slate-600 block"></i>
+            Belum ada foto lokasi yang dipilih. Klik tombol <strong>Kamera</strong> atau <strong>Pilih Galeri</strong> di atas.
+          </div>
+        </div>
+
+        <!-- Alur Verifikasi -->
+        <div class="p-4 rounded-xl bg-cyan-950/40 border border-cyan-500/30 flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+          <i class="fa-solid fa-shield-halved text-cyan-400 text-lg mt-0.5 flex-shrink-0"></i>
+          <div>
+            <strong class="text-white block mb-0.5">Alur Verifikasi Otomatis:</strong>
+            Setelah klik kirim, Anda seketika menerima <span class="text-cyan-300 font-semibold">Nomor Reservasi Resmi</span>, status berubah menjadi <span class="text-amber-300 font-semibold">Menunggu Verifikasi</span>, dan admin teknisi PT JDI akan melakukan pengecekan ODP terdekat.
+          </div>
+        </div>
+
+        <!-- Action Submit Buttons (Adaptif Mobile / Desktop) -->
+        <div class="flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-end gap-3 pt-3 border-t border-slate-800">
+          <button type="reset" onclick="resetFormState()" class="w-full sm:w-auto px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold text-slate-400 hover:text-white hover:bg-slate-800 transition-colors text-center">
+            Reset Formulir
+          </button>
+          <button 
+            type="submit" 
+            id="btnSubmitReg"
+            class="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-xs sm:text-sm bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white shadow-lg shadow-cyan-500/30 transition-all flex items-center justify-center gap-2"
+          >
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Kirim & Dapatkan Nomor Reservasi</span>
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- Program Unggulan & Galeri Kumpulan Foto Section -->
+  <section id="kegiatan" class="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950 text-cyan-300 text-xs font-semibold mb-3 border border-cyan-500/40">
+        <i class="fa-solid fa-star"></i> PROGRAM & DOKUMENTASI
+      </div>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-white">Program Unggulan & Galeri Kegiatan</h2>
+      <p class="text-sm text-slate-300 mt-2">
+        Dedikasi nyata tim PT. JALUR DATA INDONESIA dalam membangun infrastruktur dan melayani masyarakat.
+      </p>
+    </div>
+
+    <!-- Highlight Cards Program Unggulan -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+      
+      <!-- Program 1: Hotspot Publik Balai Desa Sukoharjo, Banyumas, Pantura -->
+      <div class="glass-card-glow rounded-2xl p-5 border border-cyan-500/30">
+        <div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl mb-4 border border-cyan-500/30">
+          <i class="fa-solid fa-wifi"></i>
+        </div>
+        <h3 class="font-bold text-white text-base mb-1.5">Program Desa Melek Digital</h3>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          Penyediaan hotspot publik gratis di balai desa, pos kamling, dan ruang belajar anak di daerah Sukoharjo & Banyumas tambah Pantura bagi Balai desa Yang berlanggan WIFI JDATA.
+        </p>
+      </div>
+
+      <!-- Program 2: Respon Cepat Teknisi -->
+      <div class="glass-card-glow rounded-2xl p-5 border border-blue-500/30">
+        <div class="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-xl mb-4 border border-blue-500/30">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <h3 class="font-bold text-white text-base mb-1.5">Instalasi Kilat & Maintenance 24/7</h3>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          Pemasangan cepat oleh teknisi bersertifikasi serta tim pemeliharaan siap siaga memastikan kualitas sinyal optik selalu maksimal di segala kondisi cuaca.
+        </p>
+      </div>
+
+      <!-- Program 3: Internet Sekolah & UMKM -->
+      <div class="glass-card-glow rounded-2xl p-5 border border-emerald-500/30">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl mb-4 border border-emerald-500/30">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <h3 class="font-bold text-white text-base mb-1.5">Konektivitas UMKM & Pendidikan</h3>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          Dukungan bandwidth khusus untuk kemajuan bisnis UMKM lokal serta sarana pembelajaran berbasis internet di wilayah Sukoharjo, Banyumas, dan BANJAREJO, BUMI ARUM, PRINGSEWU.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Folder Galeri Foto Kegiatan Publik -->
+    <div class="glass-card-glow rounded-3xl p-5 sm:p-7 border border-cyan-500/30">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6 pb-4 border-b border-slate-800">
+        <div>
+          <h3 class="text-lg font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-folder-open text-cyan-400"></i> Folder Foto Kegiatan Lapangan & Pemasangan
+          </h3>
+          <p class="text-xs text-slate-400">Dokumentasi penarikan kabel fiber optik, pemeliharaan ODP, dan aktivasi pelanggan baru</p>
+        </div>
+        <div class="text-xs text-cyan-400 font-semibold bg-cyan-950 px-3 py-1.5 rounded-xl border border-cyan-500/30 flex items-center gap-1.5">
+          <i class="fa-solid fa-images"></i> <span id="galleryCountBadge">0 Foto Dokumentasi</span>
+        </div>
+      </div>
+
+      <!-- Public Photos Grid -->
+      <div id="galleryContainer" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 sm:gap-4">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimoni Pelanggan Section -->
+  <section id="testimoni" class="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950 text-cyan-300 text-xs font-semibold mb-3 border border-cyan-500/40">
+        <i class="fa-solid fa-comments"></i> APA KATA MEREKA
+      </div>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-white">Testimoni Pelanggan Setia PT JDI</h2>
+      <p class="text-sm text-slate-300 mt-2">Kepuasan pelanggan dari berbagai wilayah adalah kebanggaan kami.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Testimoni 1 -->
+      <div class="glass-card-glow rounded-2xl p-5 border border-cyan-500/20 flex flex-col justify-between">
+        <div>
+          <div class="flex text-amber-400 text-xs gap-1 mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-xs text-slate-300 italic leading-relaxed mb-4">
+            "Sinyal stabil sekali waktu hujan lebat di Banyumas. Anak-anak lancar sekolah daring dan nonton YouTube 4K tidak ada buffering sama sekali. Sangat puas!"
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-3 border-t border-slate-800">
+          <div class="w-9 h-9 rounded-full bg-cyan-500/20 text-cyan-400 font-bold flex items-center justify-center text-xs">BP</div>
+          <div>
+            <div class="text-xs font-bold text-white">Bapak Prasetyo</div>
+            <div class="text-[10px] text-cyan-300">Pelanggan Paket 30 Mbps - Banyumas</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimoni 2 -->
+      <div class="glass-card-glow rounded-2xl p-5 border border-cyan-500/20 flex flex-col justify-between">
+        <div>
+          <div class="flex text-amber-400 text-xs gap-1 mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-xs text-slate-300 italic leading-relaxed mb-4">
+            "Proses pasang baru sangat cepat, kemarin daftar lewat web dapat nomor reservasi otomatis, besoknya teknisi langsung datang pasang kabel. Pelayanan ramah!"
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-3 border-t border-slate-800">
+          <div class="w-9 h-9 rounded-full bg-blue-500/20 text-blue-400 font-bold flex items-center justify-center text-xs">IW</div>
+          <div>
+            <div class="text-xs font-bold text-white">Ibu Wahyuni</div>
+            <div class="text-[10px] text-cyan-300">Pelanggan Paket 25 Mbps - Sukoharjo</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimoni 3 -->
+      <div class="glass-card-glow rounded-2xl p-5 border border-cyan-500/20 flex flex-col justify-between">
+        <div>
+          <div class="flex text-amber-400 text-xs gap-1 mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-xs text-slate-300 italic leading-relaxed mb-4">
+            "Usaha cafe kami di Pantura makin ramai semenjak pakai WiFi PT JDI. Pengunjung senang karena internetnya kencang dan tidak lemot saat ramai nongkrong."
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-3 border-t border-slate-800">
+          <div class="w-9 h-9 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-xs">RM</div>
+          <div>
+            <div class="text-xs font-bold text-white">Rian Maulana</div>
+            <div class="text-[10px] text-cyan-300">Pemilik Usaha Cafe - Pantura</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Kontak & Lokasi Kantor Section -->
+  <section id="kontak" class="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950 text-cyan-300 text-xs font-semibold mb-3 border border-cyan-500/40">
+        <i class="fa-solid fa-location-dot"></i> LOKASI KANTOR
+      </div>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-white">Kontak & Lokasi Kantor Resmi</h2>
+      <p class="text-sm text-slate-300 mt-2">Kunjungi kantor layanan kami atau hubungi tim customer care kami setiap saat.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+      
+      <!-- Detail Alamat & Kontak -->
+      <div class="lg:col-span-5 space-y-4 flex flex-col justify-between">
+        
+        <div class="glass-card-glow rounded-2xl p-6 border border-cyan-500/30 space-y-4">
+          <div class="flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center flex-shrink-0 text-lg border border-cyan-500/30">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <strong class="text-sm text-white block">Alamat Kantor Pusat:</strong>
+              <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                Jalan Jl. AMD RT 010 RW 03 No 35 Banyumas Kec. Banyumas Kab. Pringsewu (Depan Pertashop).
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3.5 pt-3 border-t border-slate-800">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 text-lg border border-emerald-500/30">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div>
+              <strong class="text-sm text-white block">WhatsApp Layanan & Aduan:</strong>
+              <a href="https://wa.me/6281272737850" target="_blank" class="text-xs text-emerald-400 hover:underline font-semibold block mt-0.5">
+                0812-7273-7850 (Respon Cepat)
+              </a>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3.5 pt-3 border-t border-slate-800">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center flex-shrink-0 text-lg border border-blue-500/30">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div>
+              <strong class="text-sm text-white block">Jam Operasional:</strong>
+              <p class="text-xs text-slate-300 mt-0.5">Senin - Minggu: 08.00 - 21.00 WIB<br><span class="text-cyan-300">NOC & Monitoring Teknis: 24 Jam Non-Stop</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tombol WhatsApp Langsung -->
+        <a href="https://wa.me/6281272737850?text=Halo%20Admin%20PT%20JALUR%20DATA%20INDONESIA,%20saya%20ingin%20berkonsultasi" target="_blank" class="p-4 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-sm flex items-center justify-center gap-2.5 shadow-lg shadow-emerald-600/30 transition-all">
+          <i class="fa-brands fa-whatsapp text-xl"></i>
+          <span>Hubungi WhatsApp Resmi Sekarang</span>
+        </a>
+
+      </div>
+
+      <!-- Google Maps Embed -->
+      <div class="lg:col-span-7">
+        <div class="glass-card-glow rounded-2xl p-3 border border-cyan-500/30 h-full min-h-[320px] flex flex-col">
+          <div class="flex items-center justify-between px-2 pb-2 text-xs text-slate-300">
+            <span><i class="fa-solid fa-map mr-1.5 text-cyan-400"></i> Peta Wilayah Banyumas - Pringsewu</span>
+            <span class="text-[11px] text-cyan-300 font-medium">Dekat Pertashop Banyumas</span>
+          </div>
+          <div class="relative rounded-xl overflow-hidden flex-1 min-h-[280px] bg-slate-900 border border-slate-800">
+            <iframe 
+              title="Peta Lokasi Kantor PT JDI"
+              class="w-full h-full border-0 absolute inset-0"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.186857187123!2d104.9723!3d-5.3854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMjMnMDcuNCJTIDEwNMKwNTgnMjAuMyJF!5e0!3m2!1sid!2sid!4v1620000000000!5m2!1sid!2sid"
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="relative z-10 border-t border-slate-800/80 bg-slate-950/90 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      
+      <div class="md:col-span-2 space-y-3">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/20 p-0.5 border border-cyan-500/40">
+            <img id="footerCompanyLogo" src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=120&auto=format&fit=crop&q=80" alt="Logo PT JDI" class="w-full h-full object-cover rounded-lg" />
+          </div>
+          <span class="font-heading font-extrabold text-white text-base tracking-wide">PT. JALUR DATA INDONESIA</span>
+        </div>
+        <p class="text-xs text-slate-400 max-w-md leading-relaxed">
+          Koneksi Cepat Tanpa Batas, Keluarga Puas! Layanan akses internet berkecepatan tinggi dengan serat optik murni untuk wilayah Sukoharjo, Banyumas, BANJAREJO, BUMI ARUM, PRINGSEWU, Pantura, dan sekitarnya.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-3">Tautan Cepat</h4>
+        <ul class="space-y-2 text-xs text-slate-400">
+          <li><a href="#beranda" class="hover:text-cyan-400 transition-colors">Beranda Utama</a></li>
+          <li><a href="#profil" class="hover:text-cyan-400 transition-colors">Profil & Legalitas PT</a></li>
+          <li><a href="#paket" class="hover:text-cyan-400 transition-colors">Daftar Paket Internet</a></li>
+          <li><a href="#cek-area" class="hover:text-cyan-400 transition-colors">Cek Area & Reservasi</a></li>
+          <li><a href="#kegiatan" class="hover:text-cyan-400 transition-colors">Galeri Dokumentasi</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-3">Layanan Informasi</h4>
+        <div class="space-y-2 text-xs text-slate-400">
+          <p><i class="fa-solid fa-phone text-cyan-400 mr-1.5"></i> 0812-7273-7850</p>
+          <p><i class="fa-solid fa-envelope text-cyan-400 mr-1.5"></i> info@jalurdata.id</p>
+          <p><i class="fa-solid fa-map-pin text-cyan-400 mr-1.5"></i> Banyumas, Kab. Pringsewu</p>
+          <div class="pt-2">
+            <button onclick="openAdminModal()" class="text-[11px] text-slate-500 hover:text-cyan-400 flex items-center gap-1.5 transition-colors">
+              <i class="fa-solid fa-lock"></i> Portal Manajemen Staf PT JDI
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto pt-6 border-t border-slate-900 text-center text-xs text-slate-500">
+      &copy; 2026 PT. JALUR DATA INDONESIA. Seluruh Hak Cipta Dilindungi. Terdaftar di Kominfo & APJII.
+    </div>
+  </footer>
+
+  <!-- Modal Berhasil Daftar & Nomor Reservasi Otomatis -->
+  <div id="reservationSuccessModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md hidden">
+    <div class="glass-card-glow rounded-3xl w-full max-w-md p-6 border border-cyan-500/50 relative shadow-2xl animate-scaleIn text-center">
+      
+      <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center text-3xl mb-4 border border-emerald-500/40">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+
+      <h3 class="text-xl font-heading font-extrabold text-white">Pendaftaran Berhasil Terkirim!</h3>
+      <p class="text-xs text-slate-300 mt-1">Data Anda telah tercatat ke sistem terintegrasi PT. JALUR DATA INDONESIA.</p>
+
+      <!-- Kotak Nomor Reservasi Resmi -->
+      <div class="my-5 p-4 rounded-2xl bg-cyan-950/70 border border-cyan-500/50">
+        <div class="text-[11px] text-slate-400 uppercase tracking-wider font-medium">Nomor Reservasi Resmi Anda:</div>
+        <div id="modalResNumber" class="text-xl sm:text-2xl font-black text-cyan-300 tracking-wider my-1 select-all font-mono">
+          JDI-2026-0000
+        </div>
+        <div class="inline-flex items-center gap-1 text-[11px] px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30">
+          <i class="fa-solid fa-clock"></i> Status: Menunggu Verifikasi Teknisi
+        </div>
+      </div>
+
+      <div class="text-xs text-slate-300 text-left space-y-1.5 p-3 rounded-xl bg-slate-900/80 mb-5 border border-slate-800">
+        <div><strong>Nama:</strong> <span id="modalResName" class="text-white"></span></div>
+        <div><strong>WhatsApp:</strong> <span id="modalResPhone" class="text-white"></span></div>
+        <div><strong>Wilayah:</strong> <span id="modalResDesa" class="text-white"></span></div>
+        <div><strong>Paket Dipilih:</strong> <span id="modalResPackage" class="text-white"></span></div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="space-y-2">
+        <a id="modalWhatsAppConfirmBtn" href="#" target="_blank" class="w-full py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/30 transition-all">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>Konfirmasi ke WhatsApp Admin Teknisi</span>
+        </a>
+        <button onclick="closeReservationModal()" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition-colors">
+          Tutup
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Portal Manajemen Admin PT JDI (Password Protected) -->
+  <div id="adminModal" class="fixed inset-0 z-50 flex items-center justify-center p-2.5 sm:p-4 md:p-6 bg-slate-950/90 backdrop-blur-md hidden">
+    <div class="glass-card-glow rounded-2xl sm:rounded-3xl w-full max-w-5xl max-h-[95vh] sm:max-h-[92vh] flex flex-col border border-cyan-500/40 relative shadow-2xl overflow-hidden transition-all">
+      
+      <!-- Admin Modal Header with Close & Back Buttons -->
+      <div class="px-4 sm:px-6 py-3.5 sm:py-4 border-b border-slate-800 flex items-center justify-between bg-slate-900/80 flex-shrink-0">
+        <div class="flex items-center gap-2.5 sm:gap-3">
+          <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-sm sm:text-base border border-cyan-500/30">
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
+          <div>
+            <h3 class="font-heading font-bold text-white text-sm sm:text-base leading-snug">Portal Manajemen Admin PT JDI</h3>
+            <p class="text-[10px] sm:text-[11px] text-slate-400">Kelola Pendaftar Baru, Paket Internet, Galeri & Database Spreadsheet</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center gap-2">
+          <button onclick="closeAdminModal()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-medium flex items-center gap-1.5 border border-slate-700">
+            <i class="fa-solid fa-arrow-left"></i> <span>Kembali</span>
+          </button>
+          <button onclick="closeAdminModal()" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center transition-colors">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Password Guard Screen -->
+      <div id="adminAuthScreen" class="p-6 sm:p-10 text-center w-full max-w-sm sm:max-w-md mx-auto my-auto space-y-4">
+        <div class="w-14 h-14 rounded-2xl bg-cyan-500/20 text-cyan-400 mx-auto flex items-center justify-center text-2xl border border-cyan-500/40">
+          <i class="fa-solid fa-key"></i>
+        </div>
+        <h4 class="font-bold text-white text-base sm:text-lg">Masukkan Password Admin</h4>
+        <p class="text-xs text-slate-400">
+          Halaman ini khusus untuk staf resmi PT. JALUR DATA INDONESIA.
+        </p>
+        <div class="space-y-3 pt-2 w-full">
+          <input 
+            type="password" 
+            id="adminPasswordInput" 
+            placeholder="Password default: admin123" 
+            class="form-input-adaptive w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-center text-xs sm:text-sm outline-none focus:border-cyan-400"
+            onkeydown="if(event.key === 'Enter') handleAdminLogin()"
+          />
+          <button onclick="handleAdminLogin()" class="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-xs sm:text-sm hover:from-cyan-400 hover:to-blue-500 transition-all shadow-lg">
+            Buka Portal Admin
+          </button>
+          <div id="adminAuthError" class="text-xs text-rose-400 hidden font-medium">Password salah! Silakan gunakan <strong>admin123</strong></div>
+        </div>
+      </div>
+
+      <!-- Admin Dashboard Screen (Active when logged in) -->
+      <div id="adminDashboardScreen" class="hidden flex-1 flex flex-col overflow-hidden">
+        
+        <!-- Tab Navigation Bar -->
+        <div class="flex items-center border-b border-slate-800 px-3 sm:px-6 bg-slate-900/60 overflow-x-auto text-xs font-semibold no-scrollbar flex-shrink-0">
+          <button onclick="switchAdminTab('reservations')" id="tabBtn-reservations" class="py-3 px-3 sm:px-4 border-b-2 border-cyan-400 text-cyan-300 flex items-center gap-2 flex-shrink-0">
+            <i class="fa-solid fa-users"></i> Pendaftar Baru (<span id="adminBadgeCount">0</span>)
+          </button>
+          <button onclick="switchAdminTab('packages')" id="tabBtn-packages" class="py-3 px-3 sm:px-4 border-b-2 border-transparent text-slate-400 hover:text-white flex items-center gap-2 flex-shrink-0">
+            <i class="fa-solid fa-layer-group"></i> Edit Paket WiFi
+          </button>
+          <button onclick="switchAdminTab('gallery')" id="tabBtn-gallery" class="py-3 px-3 sm:px-4 border-b-2 border-transparent text-slate-400 hover:text-white flex items-center gap-2 flex-shrink-0">
+            <i class="fa-solid fa-folder-open text-cyan-400"></i> Folder Foto Kegiatan (<span id="adminGalleryCount">0</span>)
+          </button>
+          <button onclick="switchAdminTab('branding')" id="tabBtn-branding" class="py-3 px-3 sm:px-4 border-b-2 border-transparent text-slate-400 hover:text-white flex items-center gap-2 flex-shrink-0">
+            <i class="fa-solid fa-image"></i> Ubah Logo PT
+          </button>
+          <button onclick="switchAdminTab('database')" id="tabBtn-database" class="py-3 px-3 sm:px-4 border-b-2 border-transparent text-slate-400 hover:text-white flex items-center gap-2 flex-shrink-0">
+            <i class="fa-solid fa-file-excel text-emerald-400"></i> Database Spreadsheet
+          </button>
+          <div class="ml-auto flex items-center gap-2 py-2">
+            <button onclick="handleAdminLogout()" class="text-xs text-rose-400 hover:underline px-2 flex items-center gap-1">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab 1: Pendaftar Masuk / Reservasi Pelanggan -->
+        <div id="tabContent-reservations" class="p-3 sm:p-6 overflow-y-auto flex-1 space-y-4">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div>
+              <h4 class="font-bold text-white text-sm">Daftar Reservasi Calon Pelanggan Baru</h4>
+              <p class="text-[11px] text-slate-400">Periksa foto lokasi, nomor kontak, dan perbarui status verifikasi lapangan teknisi</p>
+            </div>
+            <div class="flex items-center gap-2 w-full sm:w-auto">
+              <button onclick="syncWithGoogleSheet()" class="flex-1 sm:flex-none px-3 py-2 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition-all">
+                <i class="fa-solid fa-arrows-rotate"></i> <span>Sinkron Spreadsheet</span>
+              </button>
+              <button onclick="clearAllDemoData()" class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-rose-950 text-slate-300 hover:text-rose-400 text-xs border border-slate-700 transition-all">
+                Reset Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="overflow-x-auto rounded-xl border border-slate-800 w-full">
+            <table class="w-full text-left text-xs text-slate-300 min-w-[620px]">
+              <thead class="bg-slate-900/90 text-slate-400 border-b border-slate-800 uppercase text-[10px] tracking-wider">
+                <tr>
+                  <th class="p-3">No. Reservasi</th>
+                  <th class="p-3">Nama & WhatsApp</th>
+                  <th class="p-3">Wilayah & Paket</th>
+                  <th class="p-3">Alamat & Foto Lokasi</th>
+                  <th class="p-3">Status Verifikasi</th>
+                  <th class="p-3 text-center">Aksi Hubungi</th>
+                </tr>
+              </thead>
+              <tbody id="adminReservationsTableBody" class="divide-y divide-slate-800/60 bg-slate-950/40">
+                <!-- Dynamically rendered via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Tab 2: Edit Paket WiFi -->
+        <div id="tabContent-packages" class="p-3 sm:p-6 overflow-y-auto flex-1 space-y-5 hidden">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <h4 class="font-bold text-white text-sm">Kelola Rincian Paket Internet WiFi</h4>
+              <p class="text-[11px] text-slate-400">Admin dapat mengubah tarif, kecepatan, atau menambah paket baru</p>
+            </div>
+            <button onclick="addNewPackagePrompt()" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-all">
+              <i class="fa-solid fa-plus"></i> Tambah Paket Baru
+            </button>
+          </div>
+
+          <div id="adminPackagesList" class="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-4">
+            <!-- Dynamic package editor cards -->
+          </div>
+        </div>
+
+        <!-- Tab 3: Folder Kumpulan Foto Kegiatan (Hanya Foto-Foto Saja) -->
+        <div id="tabContent-gallery" class="p-3 sm:p-6 overflow-y-auto flex-1 space-y-5 hidden">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-slate-900/60 p-4 rounded-2xl border border-cyan-500/20">
+            <div>
+              <h4 class="font-bold text-white text-sm flex items-center gap-2">
+                <i class="fa-solid fa-folder text-cyan-400"></i> Folder Kumpulan Foto Dokumentasi
+              </h4>
+              <p class="text-[11px] text-slate-400">Pilih foto dari galeri atau kamera langsung untuk ditambahkan ke folder galeri web</p>
+            </div>
+            
+            <div class="flex items-center gap-2 w-full sm:w-auto">
+              <label for="adminCameraUpload" class="cursor-pointer px-3.5 py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition-all">
+                <i class="fa-solid fa-camera"></i> <span>Kamera HP</span>
+              </label>
+              <input type="file" id="adminCameraUpload" accept="image/*" capture="environment" class="hidden" onchange="handleAdminBulkPhotoUpload(event)">
+
+              <label for="adminGalleryUpload" class="cursor-pointer px-3.5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 flex items-center justify-center gap-1.5 transition-all">
+                <i class="fa-solid fa-images text-cyan-400"></i> <span>+ Buka File Galeri</span>
+              </label>
+              <input type="file" id="adminGalleryUpload" accept="image/*" multiple class="hidden" onchange="handleAdminBulkPhotoUpload(event)">
+            </div>
+          </div>
+
+          <!-- Kumpulan Foto Grid di Folder Admin -->
+          <div class="space-y-2">
+            <div class="text-xs font-bold text-slate-300 flex items-center justify-between">
+              <span>Isi Folder Foto Kegiatan (<span id="adminGalleryFolderCount">0</span> foto):</span>
+              <button onclick="clearAllGalleryPhotos()" class="text-[11px] text-rose-400 hover:underline">Kosongkan Folder</button>
+            </div>
+            <div id="adminGalleryThumbnails" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: Ubah Logo Perusahaan -->
+        <div id="tabContent-branding" class="p-3 sm:p-6 overflow-y-auto flex-1 space-y-5 hidden">
+          <div>
+            <h4 class="font-bold text-white text-sm">Ubah Logo Resmi PT. JALUR DATA INDONESIA</h4>
+            <p class="text-[11px] text-slate-400">Pilih logo langsung dari galeri atau masukkan URL logo baru</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-3xl">
+            <div class="glass-card-glow rounded-2xl p-4 sm:p-5 border border-slate-800 space-y-4">
+              <div class="text-xs font-semibold text-slate-300">Logo Saat Ini:</div>
+              <div class="w-24 h-24 rounded-2xl bg-slate-900 border border-cyan-500/30 p-1 flex items-center justify-center overflow-hidden mx-auto">
+                <img id="brandingCurrentLogoPreview" src="" alt="Logo JDI" class="w-full h-full object-cover rounded-xl" />
+              </div>
+
+              <div class="space-y-3 pt-2">
+                <label for="brandingLogoUpload" class="cursor-pointer w-full py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-bold flex items-center justify-center gap-2 transition-all">
+                  <i class="fa-solid fa-image"></i> Pilih Logo dari Galeri HP
+                </label>
+                <input type="file" id="brandingLogoUpload" accept="image/*" class="hidden" onchange="handleLogoChange(event)">
+                
+                <div class="text-[11px] text-center text-slate-500">atau masukkan URL Logo:</div>
+                <div class="flex flex-col sm:flex-row gap-2">
+                  <input type="url" id="brandingLogoUrl" placeholder="https://domain.com/logo.png" class="flex-1 px-3 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs outline-none focus:border-cyan-400" />
+                  <button onclick="handleLogoUrlSubmit()" class="w-full sm:w-auto px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold rounded-xl transition-colors">Terapkan</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card-glow rounded-2xl p-4 sm:p-5 border border-slate-800 space-y-3 text-xs text-slate-300">
+              <div class="font-bold text-white flex items-center gap-1.5 text-sm">
+                <i class="fa-solid fa-lightbulb text-amber-400"></i> Ketentuan Format Logo:
+              </div>
+              <ul class="list-disc list-inside space-y-1.5 text-slate-400 text-[11px] sm:text-xs leading-relaxed">
+                <li>Gunakan logo berbentuk persegi (1:1) dengan resolusi minimal 256x256 px.</li>
+                <li>Format didukung: PNG (transparan), JPG, atau WEBP.</li>
+                <li>Perubahan logo otomatis diperbarui pada Navbar dan Footer.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 5: Database & Integrasi Google Spreadsheet -->
+        <div id="tabContent-database" class="p-3 sm:p-6 overflow-y-auto flex-1 space-y-5 hidden">
+          <div>
+            <h4 class="font-bold text-white text-sm">Database Terintegrasi Google Spreadsheet & Apps Script</h4>
+            <p class="text-[11px] text-slate-400">Tersambung langsung dengan Google Spreadsheet resmi PT JDI</p>
+          </div>
+
+          <div class="glass-card-glow rounded-2xl p-4 sm:p-5 border border-slate-800 space-y-4 max-w-3xl">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Tautan Google Spreadsheet Database:</label>
+              <div class="flex flex-col sm:flex-row items-stretch gap-2">
+                <input 
+                  type="text" 
+                  readonly 
+                  value="https://docs.google.com/spreadsheets/d/1bR4QVxYM1sTtdaNgCS3uNA9vQHuw7iCL2cXu_DDN3TM/edit?usp=sharing" 
+                  class="flex-1 px-3 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-cyan-300 text-xs select-all outline-none"
+                />
+                <a href="https://docs.google.com/spreadsheets/d/1bR4QVxYM1sTtdaNgCS3uNA9vQHuw7iCL2cXu_DDN3TM/edit?usp=sharing" target="_blank" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs flex items-center justify-center gap-1.5 flex-shrink-0 transition-colors">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Spreadsheet
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5">URL Web App Google Apps Script (Deployment Endpoint):</label>
+              <input 
+                type="url" 
+                id="gasWebAppUrlInput" 
+                placeholder="https://script.google.com/macros/s/AKfycbx.../exec" 
+                class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs outline-none focus:border-cyan-400"
+              />
+              <p class="text-[10px] text-slate-500 mt-1">Masukkan URL hasil Deploy Web App dari Google Apps Script Anda.</p>
+            </div>
+
+            <div class="pt-2 flex flex-col sm:flex-row flex-wrap gap-2.5">
+              <button onclick="saveGasSettings()" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs transition-colors text-center">
+                Simpan Konfigurasi
+              </button>
+              <button onclick="openAppsScriptGuide()" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-400 font-bold text-xs border border-cyan-500/30 flex items-center justify-center gap-1.5 transition-colors text-center">
+                <i class="fa-solid fa-file-code"></i> Lihat Code.gs & Petunjuk Penggunaan
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Lightbox Modal Pembesar Foto -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 flex items-center justify-center p-3 bg-black/95 backdrop-blur-md hidden" onclick="closeLightbox()">
+    <div class="relative max-w-4xl max-h-[90vh] flex flex-col items-center" onclick="event.stopPropagation()">
+      <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white text-xl hover:text-cyan-400 p-2">
+        <i class="fa-solid fa-xmark"></i> Tutup
+      </button>
+      <img id="lightboxImg" src="" alt="Pratinjau Foto" class="max-w-full max-h-[82vh] rounded-2xl object-contain border border-cyan-500/40 shadow-2xl" />
+      <div id="lightboxCaption" class="mt-2 text-xs text-slate-300 text-center"></div>
+    </div>
+  </div>
+
+  <!-- Modal Petunjuk Penggunaan & Kode Backend Code.gs -->
+  <div id="guideModal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-slate-950/90 backdrop-blur-md hidden">
+    <div class="glass-card-glow rounded-2xl sm:rounded-3xl w-full max-w-3xl max-h-[90vh] flex flex-col border border-cyan-500/40 p-4 sm:p-6 overflow-hidden">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+        <h4 class="font-bold text-white text-sm sm:text-base flex items-center gap-2">
+          <i class="fa-solid fa-code text-cyan-400"></i> Petunjuk Penggunaan & Kode Backend (Code.gs)
+        </h4>
+        <button onclick="closeAppsScriptGuide()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="overflow-y-auto flex-1 space-y-4 py-4 text-xs text-slate-300">
+        <div class="p-3 rounded-xl bg-cyan-950/40 border border-cyan-500/30">
+          <strong class="text-white block mb-1">Langkah Mudah Pemasangan di Google Apps Script:</strong>
+          <ol class="list-decimal list-inside space-y-1 text-[11px] text-slate-300">
+            <li>Buka Spreadsheet Anda: <a href="https://docs.google.com/spreadsheets/d/1bR4QVxYM1sTtdaNgCS3uNA9vQHuw7iCL2cXu_DDN3TM/edit?usp=sharing" target="_blank" class="text-cyan-300 underline">Klik Tautan Spreadsheet</a></li>
+            <li>Klik menu <strong>Extensions (Ekstensi)</strong> &gt; <strong>Apps Script</strong>.</li>
+            <li>Hapus kode bawaan di `Code.gs`, lalu salin seluruh kode di bawah ini.</li>
+            <li>Klik tombol <strong>Deploy (Terapkan)</strong> &gt; <strong>New Deployment (Penerapan Baru)</strong>.</li>
+            <li>Pilih jenis <strong>Web App</strong>, atur <em>Execute as: Me</em> dan <em>Who has access: Anyone</em>.</li>
+            <li>Salin URL Web App yang dihasilkan, lalu masukkan ke kolom konfigurasi di Portal Admin web ini.</li>
+          </ol>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="font-semibold text-white">Kode Skrip Backend (Code.gs):</span>
+            <button onclick="copyCodeGs()" class="text-[11px] px-2.5 py-1 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white font-medium flex items-center gap-1">
+              <i class="fa-regular fa-copy"></i> Salin Kode
+            </button>
+          </div>
+          <pre id="codeGsBlock" class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 text-[11px] font-mono text-cyan-200 overflow-x-auto select-all max-h-60 leading-relaxed">
+// KODE BACKEND GOOGLE APPS SCRIPT (Code.gs) - PT. JALUR DATA INDONESIA
+const SPREADSHEET_ID = "1bR4QVxYM1sTtdaNgCS3uNA9vQHuw7iCL2cXu_DDN3TM";
+const SHEET_NAME = "PelangganBaru";
+
+function doGet(e) {
+  try {
+    const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+    const sheet = getOrCreateSheet(ss, SHEET_NAME);
+    const data = sheet.getDataRange().getValues();
+    const headers = data[0];
+    const rows = [];
+    
+    for (let i = 1; i < data.length; i++) {
+      let rowObj = {};
+      for (let j = 0; j < headers.length; j++) {
+        rowObj[headers[j]] = data[i][j];
+      }
+      rows.push(rowObj);
+    }
+    
+    return ContentService.createTextOutput(JSON.stringify({ status: "success", data: rows }))
+      .setMimeType(ContentService.MimeType.JSON);
+  } catch (err) {
+    return ContentService.createTextOutput(JSON.stringify({ status: "error", message: err.toString() }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+function doPost(e) {
+  try {
+    const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+    const sheet = getOrCreateSheet(ss, SHEET_NAME);
+    const body = JSON.parse(e.postData.contents);
+    
+    const timestamp = new Date();
+    sheet.appendRow([
+      timestamp,
+      body.reservationNumber || "",
+      body.name || "",
+      body.phone || "",
+      body.desa || "",
+      body.package || "",
+      body.address || "",
+      body.status || "Menunggu Verifikasi",
+      body.photoData ? "Terlampir" : "Tidak ada foto"
+    ]);
+    
+    return ContentService.createTextOutput(JSON.stringify({ 
+      status: "success", 
+      message: "Data pelanggan berhasil disimpan di Spreadsheet PT JDI!",
+      reservationNumber: body.reservationNumber 
+    })).setMimeType(ContentService.MimeType.JSON);
+  } catch (err) {
+    return ContentService.createTextOutput(JSON.stringify({ status: "error", message: err.toString() }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+function getOrCreateSheet(ss, name) {
+  let sheet = ss.getSheetByName(name);
+  if (!sheet) {
+    sheet = ss.insertSheet(name);
+    sheet.appendRow([
+      "Waktu Daftar", "No. Reservasi", "Nama Lengkap", "No. WhatsApp", 
+      "Wilayah / Desa", "Paket Internet", "Alamat & Patokan", "Status", "Keterangan Foto"
+    ]);
+    sheet.getRange(1, 1, 1, 9).setFontWeight("bold").setBackground("#0891b2").setFontColor("#ffffff");
+  }
+  return sheet;
+}
+          </pre>
+        </div>
+      </div>
+
+      <div class="pt-3 border-t border-slate-800 text-right">
+        <button onclick="closeAppsScriptGuide()" class="px-5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold">
+          Selesai & Tutup
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* State Data Aplikasi PT. JALUR DATA INDONESIA */
+    let packagesData = [
+      { id: 'pkg-1', speed: '20 Mbps', price: 'Rp155.000', period: '/bln', desc: 'Cocok untuk 1-4 perangkat, browsing lancar & streaming HD', popular: false },
+      { id: 'pkg-2', speed: '25 Mbps', price: 'Rp167.000', period: '/bln', desc: 'Pilihan hemat keluarga modern, sekolah daring & sosmed tanpa hambatan', popular: true },
+      { id: 'pkg-3', speed: '30 Mbps', price: 'Rp205.000', period: '/bln', desc: 'Kecepatan tinggi untuk gaming, streaming 4K & multi-device lancar', popular: false },
+      { id: 'pkg-4', speed: '50 Mbps', price: 'Rp255.000', period: '/bln', desc: 'Kapasitas ekstra untuk rumah besar, wfh, cafe & bisnis tempat usaha', popular: false }
+    ];
+
+    let galleryPhotos = [
+      { id: 'g-1', url: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&auto=format&fit=crop&q=80', date: '2026-03-01', caption: 'Penarikan Kabel Drop Core Fiber Optic Banyumas' },
+      { id: 'g-2', url: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop&q=80', date: '2026-03-02', caption: 'Instalasi & Pengukuran Redaman ODP Sukoharjo' },
+      { id: 'g-3', url: 'https://images.unsplash.com/photo-1520869562399-e772f042f422?w=800&auto=format&fit=crop&q=80', date: '2026-03-03', caption: 'Aktivasi Modem Pelanggan Baru BANJAREJO, BUMI ARUM, PRINGSEWU' },
+      { id: 'g-4', url: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&auto=format&fit=crop&q=80', date: '2026-03-04', caption: 'Penyediaan Hotspot Balai Desa Wilayah Pantura' }
+    ];
+
+    let reservationsData = [
+      {
+        resNumber: 'JDI-2026-0101',
+        name: 'Ahmad Fauzi',
+        phone: '081272737850',
+        desa: 'Banyumas',
+        package: '25 Mbps — Rp167.000',
+        address: 'Jl. AMD RT 010 No 35 depan Pertashop Banyumas',
+        status: 'Menunggu Verifikasi',
+        photoData: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=200&auto=format&fit=crop&q=80'
+      }
+    ];
+
+    let currentCompanyLogo = "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=120&auto=format&fit=crop&q=80";
+    let gasWebAppUrl = "";
+    let selectedLocationPhotoData = null;
+
+    /* Auto-Resize Textarea Height */
+    function autoResizeTextarea(element) {
+      if (!element) return;
+      element.style.height = 'auto';
+      element.style.height = (element.scrollHeight) + 'px';
+    }
+
+    /* On Window Load */
+    window.addEventListener('DOMContentLoaded', () => {
+      renderPackages();
+      renderPackagesSelect();
+      renderGallery();
+      renderAdminGalleryThumbnails();
+      renderAdminReservations();
+      renderAdminPackages();
+      updateLogoUI();
+
+      const addrEl = document.getElementById('custAddress');
+      if (addrEl) autoResizeTextarea(addrEl);
+    });
+
+    window.addEventListener('resize', () => {
+      const addrEl = document.getElementById('custAddress');
+      if (addrEl) autoResizeTextarea(addrEl);
+    });
+
+    /* Render Paket Internet di Halaman Utama */
+    function renderPackages() {
+      const container = document.getElementById('packagesContainer');
+      if (!container) return;
+
+      container.innerHTML = packagesData.map(pkg => `
+        <div class="glass-card-glow rounded-2xl p-6 border ${pkg.popular ? 'border-cyan-400 ring-2 ring-cyan-500/30' : 'border-cyan-500/20'} flex flex-col justify-between relative">
+          ${pkg.popular ? '<span class="absolute -top-3 right-5 px-3 py-0.5 rounded-full bg-cyan-500 text-white font-bold text-[10px] tracking-wider uppercase shadow-md shadow-cyan-500/40">Terpopuler</span>' : ''}
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-lg mb-3 border border-cyan-500/30">
+              <i class="fa-solid fa-wifi"></i>
+            </div>
+            <h3 class="text-xl font-heading font-extrabold text-white">${pkg.speed}</h3>
+            <div class="flex items-baseline gap-1 my-3">
+              <span class="text-2xl font-black text-cyan-300">${pkg.price}</span>
+              <span class="text-xs text-slate-400">${pkg.period}</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">${pkg.desc}</p>
+            <ul class="text-xs text-slate-300 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> 100% Fiber Optic Murni</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Kuota Tanpa Batas (No FUP)</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Gratis Sewa Modem WiFi</li>
+            </ul>
+          </div>
+          <a href="#cek-area" onclick="selectPackageForRegistration('${pkg.speed} — ${pkg.price}')" class="w-full py-2.5 rounded-xl ${pkg.popular ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white' : 'bg-slate-800 hover:bg-slate-700 text-cyan-300'} font-bold text-xs text-center transition-all shadow">
+            Pilih Paket Ini
+          </a>
+        </div>
+      `).join('');
+    }
+
+    /* Isi dropdown paket pada formulir pendaftaran */
+    function renderPackagesSelect() {
+      const select = document.getElementById('custPackage');
+      if (!select) return;
+      select.innerHTML = '<option value="" disabled selected>-- Pilih Kecepatan Paket --</option>' +
+        packagesData.map(p => `<option value="${p.speed} — ${p.price}">${p.speed} (${p.price}/bulan)</option>`).join('');
+    }
+
+    function selectPackageForRegistration(val) {
+      const select = document.getElementById('custPackage');
+      if (select) {
+        select.value = val;
+      }
+    }
+
+    /* Render Galeri Foto Publik */
+    function renderGallery() {
+      const container = document.getElementById('galleryContainer');
+      const countBadge = document.getElementById('galleryCountBadge');
+      if (!container) return;
+
+      if (countBadge) countBadge.textContent = `${galleryPhotos.length} Foto Dokumentasi`;
+
+      if (galleryPhotos.length === 0) {
+        container.innerHTML = '<div class="col-span-full py-8 text-center text-xs text-slate-400">Belum ada foto kegiatan di folder dokumentasi.</div>';
+        return;
+      }
+
+      container.innerHTML = galleryPhotos.map(photo => `
+        <div class="relative group rounded-xl overflow-hidden aspect-video bg-slate-900 border border-cyan-500/20 cursor-pointer" onclick="openLightbox('${photo.url}', '${photo.caption || 'Foto Dokumentasi PT JDI'}')">
+          <img src="${photo.url}" alt="Dokumentasi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x300/0f172a/06b6d4?text=PT+JDI'" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+          <div class="absolute bottom-2 left-2 right-2 text-left">
+            <span class="text-[9px] text-cyan-300 block font-mono">${photo.date || 'Terbaru'}</span>
+            <p class="text-[11px] font-semibold text-white truncate">${photo.caption || 'Dokumentasi PT JDI'}</p>
+          </div>
+          <div class="absolute top-2 right-2 w-6 h-6 rounded-full bg-slate-900/80 text-cyan-300 flex items-center justify-center text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    /* Render Mini Thumbnails di Tab Folder Admin */
+    function renderAdminGalleryThumbnails() {
+      const container = document.getElementById('adminGalleryThumbnails');
+      const countEl = document.getElementById('adminGalleryCount');
+      const folderCountEl = document.getElementById('adminGalleryFolderCount');
+      if (countEl) countEl.textContent = galleryPhotos.length;
+      if (folderCountEl) folderCountEl.textContent = galleryPhotos.length;
+
+      if (!container) return;
+
+      if (galleryPhotos.length === 0) {
+        container.innerHTML = '<div class="col-span-full text-center py-6 text-xs text-slate-500">Folder foto masih kosong.</div>';
+        return;
+      }
+
+      container.innerHTML = galleryPhotos.map((p, idx) => `
+        <div class="relative rounded-xl overflow-hidden aspect-video bg-slate-900 border border-slate-800 group">
+          <img src="${p.url}" alt="Foto ${idx+1}" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/300x200/0f172a/38bdf8?text=Foto'" />
+          <div class="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+            <button onclick="openLightbox('${p.url}', '${p.caption || ''}')" class="p-1.5 rounded-lg bg-cyan-600 text-white text-xs hover:bg-cyan-500" title="Perbesar">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+            <button onclick="deleteGalleryPhoto(${idx})" class="p-1.5 rounded-lg bg-rose-600 text-white text-xs hover:bg-rose-500" title="Hapus Foto">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+          <div class="absolute bottom-1 left-1.5 text-[9px] text-slate-300 bg-slate-900/90 px-1.5 py-0.5 rounded">
+            #${idx+1}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    /* Lightbox Functions */
+    function openLightbox(url, caption) {
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+      if (modal && img) {
+        img.src = url;
+        if (cap) cap.textContent = caption || '';
+        modal.classList.remove('hidden');
+      }
+    }
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    /* Input Preview Foto Lokasi Rumah Pelanggan */
+    function previewLocationImage(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        selectedLocationPhotoData = e.target.result;
+        const preview = document.getElementById('locationPhotoPreview');
+        const container = document.getElementById('imagePreviewContainer');
+        const placeholder = document.getElementById('photoPlaceholder');
+        const fileNameEl = document.getElementById('photoFileName');
+
+        if (preview) preview.src = selectedLocationPhotoData;
+        if (fileNameEl) fileNameEl.textContent = file.name || 'foto-lokasi.jpg';
+        if (container) container.classList.remove('hidden');
+        if (placeholder) placeholder.classList.add('hidden');
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function removeLocationPhoto() {
+      selectedLocationPhotoData = null;
+      const fileCam = document.getElementById('locationPhotoCamera');
+      const fileGal = document.getElementById('locationPhotoGallery');
+      const container = document.getElementById('imagePreviewContainer');
+      const placeholder = document.getElementById('photoPlaceholder');
+
+      if (fileCam) fileCam.value = '';
+      if (fileGal) fileGal.value = '';
+      if (container) container.classList.add('hidden');
+      if (placeholder) placeholder.classList.remove('hidden');
+    }
+
+    function resetFormState() {
+      removeLocationPhoto();
+      const addrEl = document.getElementById('custAddress');
+      if (addrEl) {
+        addrEl.style.height = 'auto';
+      }
+    }
+
+    /* Submit Pendaftaran Pelanggan Baru */
+    function handleRegistration(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const desa = document.getElementById('custDesa').value;
+      const pkg = document.getElementById('custPackage').value;
+      const address = document.getElementById('custAddress').value.trim();
+
+      if (!name || !phone || !desa || !pkg || !address) {
+        return;
+      }
+
+      // Generate Automated Reservation Number
+      const randomId = Math.floor(1000 + Math.random() * 9000);
+      const resNum = `JDI-2026-${randomId}`;
+
+      const newRegistration = {
+        resNumber: resNum,
+        name: name,
+        phone: phone,
+        desa: desa,
+        package: pkg,
+        address: address,
+        status: 'Menunggu Verifikasi',
+        photoData: selectedLocationPhotoData || ''
+      };
+
+      // Simpan ke memory lokal
+      reservationsData.unshift(newRegistration);
+      renderAdminReservations();
+
+      // Tampilkan Modal Berhasil dengan Nomor Reservasi Otomatis
+      document.getElementById('modalResNumber').textContent = resNum;
+      document.getElementById('modalResName').textContent = name;
+      document.getElementById('modalResPhone').textContent = phone;
+      document.getElementById('modalResDesa').textContent = desa;
+      document.getElementById('modalResPackage').textContent = pkg;
+
+      // Buat tautan konfirmasi WhatsApp resmi
+      const waText = encodeURIComponent(
+        `Halo Tim Admin PT JALUR DATA INDONESIA,\n\nSaya telah mendaftar pemasangan baru via website.\n\n*No. Reservasi:* ${resNum}\n*Nama:* ${name}\n*No. HP/WA:* ${phone}\n*Wilayah/Desa:* ${desa}\n*Paket:* ${pkg}\n*Alamat:* ${address}\n\nMohon informasi verifikasi ODP dan jadwal teknisi. Terima kasih!`
+      );
+      document.getElementById('modalWhatsAppConfirmBtn').href = `https://wa.me/6281272737850?text=${waText}`;
+
+      document.getElementById('reservationSuccessModal').classList.remove('hidden');
+
+      // Reset form input
+      event.target.reset();
+      resetFormState();
+
+      // Sinkronisasi otomatis ke Google Apps Script jika URL terpasang
+      if (gasWebAppUrl) {
+        postToGasBackend(newRegistration);
+      }
+    }
+
+    function closeReservationModal() {
+      document.getElementById('reservationSuccessModal').classList.add('hidden');
+    }
+
+    /* Render Tabel Pendaftar di Admin Portal */
+    function renderAdminReservations() {
+      const tbody = document.getElementById('adminReservationsTableBody');
+      const badgeCount = document.getElementById('adminBadgeCount');
+      if (badgeCount) badgeCount.textContent = reservationsData.length;
+
+      if (!tbody) return;
+
+      if (reservationsData.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="6" class="p-6 text-center text-xs text-slate-500">Belum ada pemohon reservasi yang masuk.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = reservationsData.map((res, index) => `
+        <tr class="hover:bg-slate-900/60 transition-colors">
+          <td class="p-3 font-mono font-bold text-cyan-300 text-[11px] whitespace-nowrap">
+            ${res.resNumber}
+          </td>
+          <td class="p-3">
+            <div class="font-bold text-white text-xs">${res.name}</div>
+            <a href="https://wa.me/${res.phone.replace(/[^0-9]/g, '')}" target="_blank" class="text-[11px] text-emerald-400 hover:underline flex items-center gap-1 mt-0.5">
+              <i class="fa-brands fa-whatsapp"></i> ${res.phone}
+            </a>
+          </td>
+          <td class="p-3">
+            <span class="inline-block px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 text-[10px] border border-cyan-500/30 font-medium">${res.desa}</span>
+            <div class="text-[11px] text-slate-300 mt-1">${res.package}</div>
+          </td>
+          <td class="p-3">
+            <p class="text-[11px] text-slate-300 max-w-[200px] truncate" title="${res.address}">${res.address}</p>
+            ${res.photoData ? `
+              <button onclick="openLightbox('${res.photoData}', 'Foto Lokasi: ${res.name}')" class="text-[10px] text-cyan-400 hover:underline mt-1 flex items-center gap-1">
+                <i class="fa-solid fa-image"></i> Lihat Foto Rumah
+              </button>
+            ` : '<span class="text-[10px] text-slate-500">Tanpa Foto</span>'}
+          </td>
+          <td class="p-3">
+            <select onchange="updateReservationStatus(${index}, this.value)" class="px-2 py-1 rounded-lg bg-slate-900 border border-slate-700 text-xs font-semibold ${res.status === 'Terverifikasi' ? 'text-emerald-400' : (res.status === 'Selesai Terpasang' ? 'text-blue-400' : 'text-amber-400')} outline-none">
+              <option value="Menunggu Verifikasi" ${res.status === 'Menunggu Verifikasi' ? 'selected' : ''}>Menunggu Verifikasi</option>
+              <option value="Terverifikasi" ${res.status === 'Terverifikasi' ? 'selected' : ''}>Terverifikasi</option>
+              <option value="Proses Tarik Kabel" ${res.status === 'Proses Tarik Kabel' ? 'selected' : ''}>Proses Tarik Kabel</option>
+              <option value="Selesai Terpasang" ${res.status === 'Selesai Terpasang' ? 'selected' : ''}>Selesai Terpasang</option>
+            </select>
+          </td>
+          <td class="p-3 text-center">
+            <a href="https://wa.me/${res.phone.replace(/[^0-9]/g, '')}?text=Halo%20${encodeURIComponent(res.name)},%20kami%20dari%20Tim%20Teknisi%20PT%20JDI%20terkait%20Reservasi%20${res.resNumber}" target="_blank" class="p-2 rounded-lg bg-emerald-600/80 hover:bg-emerald-500 text-white text-xs inline-flex items-center gap-1 transition-all" title="Kirim Chat WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i> Chat
+            </a>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function updateReservationStatus(index, newStatus) {
+      if (reservationsData[index]) {
+        reservationsData[index].status = newStatus;
+        renderAdminReservations();
+      }
+    }
+
+    function clearAllDemoData() {
+      reservationsData = [];
+      renderAdminReservations();
+    }
+
+    /* Render Edit Paket WiFi di Portal Admin */
+    function renderAdminPackages() {
+      const container = document.getElementById('adminPackagesList');
+      if (!container) return;
+
+      container.innerHTML = packagesData.map((pkg, idx) => `
+        <div class="glass-card-glow rounded-xl p-4 border border-slate-800 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-cyan-400">Paket #${idx+1}</span>
+            <button onclick="deletePackage(${idx})" class="text-xs text-rose-400 hover:text-rose-300">
+              <i class="fa-solid fa-trash"></i> Hapus
+            </button>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-[10px] text-slate-400 mb-1">Kecepatan:</label>
+              <input type="text" value="${pkg.speed}" onchange="updatePackageField(${idx}, 'speed', this.value)" class="w-full px-2.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white" />
+            </div>
+            <div>
+              <label class="block text-[10px] text-slate-400 mb-1">Harga Bulanan:</label>
+              <input type="text" value="${pkg.price}" onchange="updatePackageField(${idx}, 'price', this.value)" class="w-full px-2.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-xs text-cyan-300" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-[10px] text-slate-400 mb-1">Deskripsi Paket:</label>
+            <input type="text" value="${pkg.desc}" onchange="updatePackageField(${idx}, 'desc', this.value)" class="w-full px-2.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white" />
+          </div>
+          <div class="flex items-center gap-2 pt-1">
+            <input type="checkbox" id="pop-${idx}" ${pkg.popular ? 'checked' : ''} onchange="updatePackageField(${idx}, 'popular', this.checked)" class="rounded text-cyan-500" />
+            <label for="pop-${idx}" class="text-xs text-slate-300">Tandai sebagai Paket Terpopuler</label>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function updatePackageField(idx, field, value) {
+      if (packagesData[idx]) {
+        packagesData[idx][field] = value;
+        renderPackages();
+        renderPackagesSelect();
+      }
+    }
+
+    function addNewPackagePrompt() {
+      const newSpeed = "40 Mbps";
+      const newPrice = "Rp235.000";
+      packagesData.push({
+        id: 'pkg-' + (packagesData.length + 1),
+        speed: newSpeed,
+        price: newPrice,
+        period: '/bln',
+        desc: 'Kecepatan internet optimal untuk streaming dan multitasking lancar.',
+        popular: false
+      });
+      renderPackages();
+      renderPackagesSelect();
+      renderAdminPackages();
+    }
+
+    function deletePackage(idx) {
+      if (packagesData.length <= 1) return;
+      packagesData.splice(idx, 1);
+      renderPackages();
+      renderPackagesSelect();
+      renderAdminPackages();
+    }
+
+    /* Upload Kumpulan Foto Galeri oleh Admin */
+    function handleAdminBulkPhotoUpload(event) {
+      const files = event.target.files;
+      if (!files || files.length === 0) return;
+
+      const dateStr = new Date().toISOString().split('T')[0];
+
+      Array.from(files).forEach((file, index) => {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          galleryPhotos.unshift({
+            id: 'g-' + Date.now() + '-' + index,
+            url: e.target.result,
+            date: dateStr,
+            caption: file.name.replace(/\.[^/.]+$/, "") || 'Dokumentasi Lapangan PT JDI'
+          });
+          renderGallery();
+          renderAdminGalleryThumbnails();
+        };
+        reader.readAsDataURL(file);
+      });
+      event.target.value = '';
+    }
+
+    function deleteGalleryPhoto(idx) {
+      galleryPhotos.splice(idx, 1);
+      renderGallery();
+      renderAdminGalleryThumbnails();
+    }
+
+    function clearAllGalleryPhotos() {
+      galleryPhotos = [];
+      renderGallery();
+      renderAdminGalleryThumbnails();
+    }
+
+    /* Ubah Logo Perusahaan */
+    function handleLogoChange(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        currentCompanyLogo = e.target.result;
+        updateLogoUI();
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function handleLogoUrlSubmit() {
+      const url = document.getElementById('brandingLogoUrl').value.trim();
+      if (url) {
+        currentCompanyLogo = url;
+        updateLogoUI();
+      }
+    }
+
+    function updateLogoUI() {
+      const navLogo = document.getElementById('navCompanyLogo');
+      const footerLogo = document.getElementById('footerCompanyLogo');
+      const previewLogo = document.getElementById('brandingCurrentLogoPreview');
+
+      if (navLogo) navLogo.src = currentCompanyLogo;
+      if (footerLogo) footerLogo.src = currentCompanyLogo;
+      if (previewLogo) previewLogo.src = currentCompanyLogo;
+    }
+
+    /* Admin Authentication & Modal Management */
+    function openAdminModal() {
+      document.getElementById('adminModal').classList.remove('hidden');
+    }
+
+    function closeAdminModal() {
+      document.getElementById('adminModal').classList.add('hidden');
+    }
+
+    function handleAdminLogin() {
+      const input = document.getElementById('adminPasswordInput');
+      const errorMsg = document.getElementById('adminAuthError');
+      
+      // Password default: admin123
+      if (input.value === 'admin123') {
+        document.getElementById('adminAuthScreen').classList.add('hidden');
+        document.getElementById('adminDashboardScreen').classList.remove('hidden');
+        errorMsg.classList.add('hidden');
+        input.value = '';
+      } else {
+        errorMsg.classList.remove('hidden');
+      }
+    }
+
+    function handleAdminLogout() {
+      document.getElementById('adminDashboardScreen').classList.add('hidden');
+      document.getElementById('adminAuthScreen').classList.remove('hidden');
+      document.getElementById('adminPasswordInput').value = '';
+    }
+
+    /* Switch Admin Dashboard Tabs */
+    function switchAdminTab(tabName) {
+      const tabs = ['reservations', 'packages', 'gallery', 'branding', 'database'];
+      tabs.forEach(t => {
+        const content = document.getElementById(`tabContent-${t}`);
+        const btn = document.getElementById(`tabBtn-${t}`);
+        if (content && btn) {
+          if (t === tabName) {
+            content.classList.remove('hidden');
+            btn.classList.add('border-cyan-400', 'text-cyan-300');
+            btn.classList.remove('border-transparent', 'text-slate-400');
+          } else {
+            content.classList.add('hidden');
+            btn.classList.remove('border-cyan-400', 'text-cyan-300');
+            btn.classList.add('border-transparent', 'text-slate-400');
+          }
+        }
+      });
+    }
+
+    /* Sinkronisasi Database Google Spreadsheet & Apps Script */
+    function saveGasSettings() {
+      const urlInput = document.getElementById('gasWebAppUrlInput');
+      if (urlInput) {
+        gasWebAppUrl = urlInput.value.trim();
+        syncWithGoogleSheet();
+      }
+    }
+
+    function syncWithGoogleSheet() {
+      if (!gasWebAppUrl) {
+        // Mode demo tanpa error
+        return;
+      }
+
+      fetch(gasWebAppUrl)
+        .then(res => res.json())
+        .then(res => {
+          if (res && res.data && Array.isArray(res.data)) {
+            // Sinkronkan data jika ada baris baru
+            res.data.forEach(item => {
+              const exists = reservationsData.some(r => r.resNumber === item['No. Reservasi']);
+              if (!exists && item['No. Reservasi']) {
+                reservationsData.push({
+                  resNumber: item['No. Reservasi'],
+                  name: item['Nama Lengkap'] || '-',
+                  phone: item['No. WhatsApp'] || '-',
+                  desa: item['Wilayah / Desa'] || '-',
+                  package: item['Paket Internet'] || '-',
+                  address: item['Alamat & Patokan'] || '-',
+                  status: item['Status'] || 'Menunggu Verifikasi',
+                  photoData: ''
+                });
+              }
+            });
+            renderAdminReservations();
+          }
+        })
+        .catch(err => {
+          console.error("Gagal sinkron:", err);
+        });
+    }
+
+    function postToGasBackend(data) {
+      if (!gasWebAppUrl) return;
+      fetch(gasWebAppUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      }).catch(err => console.error("Error posting to GAS:", err));
+    }
+
+    function openAppsScriptGuide() {
+      document.getElementById('guideModal').classList.remove('hidden');
+    }
+
+    function closeAppsScriptGuide() {
+      document.getElementById('guideModal').classList.add('hidden');
+    }
+
+    function copyCodeGs() {
+      const code = document.getElementById('codeGsBlock').innerText;
+      const tempInput = document.createElement('textarea');
+      tempInput.value = code;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+    }
+
+    /* Toggle Mobile Navigation */
+    function toggleMobileNav() {
+      const nav = document.getElementById('mobileNavMenu');
+      const icon = document.getElementById('navToggleIcon');
+      if (nav) {
+        nav.classList.toggle('hidden');
+        if (icon) {
+          icon.classList.toggle('fa-bars');
+          icon.classList.toggle('fa-xmark');
+        }
+      }
+    }
+  </script>
+</body>
+</html>
